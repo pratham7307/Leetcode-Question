@@ -1,20 +1,16 @@
 class Solution {
     public char nextGreatestLetter(char[] letters, char target) {
         int n=letters.length;
-        int low=0,high=n-1;
         char res='#';
-        while(low<=high){
-            int mid=low+(high-low)/2;
-            if(letters[mid] == target){
-                low=mid+1;
-            }else if(letters[mid]<target){
-                low=mid+1;
-            }else{
-                res=letters[mid];
-                high=mid-1;
+        for(int i=0;i<n;i++){
+            if(letters[i]>target){
+                res=letters[i];
+                break;
+            }        
             }
-        }
-        if(res=='#') return letters[0];
-        return res;
+            if(res=='#'){
+                return letters[0];
+            }
+            return res;
     }
 }
