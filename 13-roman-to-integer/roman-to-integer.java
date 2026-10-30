@@ -14,8 +14,7 @@ class Solution {
             int prev=map.get(s.charAt(i-1));
             int curr=map.get(s.charAt(i));
             if(prev<curr){
-                total-=prev;
-                total+=(curr-prev);
+               total+=curr-2*prev;
             }else{
                 total+=curr;
             }
