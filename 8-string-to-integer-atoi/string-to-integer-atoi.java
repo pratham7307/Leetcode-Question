@@ -11,10 +11,6 @@ class Solution {
             }
             i++;
         }
-        while(i<n && s.charAt(i)=='0'){
-            i++;
-        }
-
         int num=0;
         while(i<n && (s.charAt(i)>='0' && s.charAt(i)<='9')){
             int digit=s.charAt(i)-'0';
